@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class TaskTest {
@@ -17,7 +18,7 @@ class TaskTest {
     @Test
 
     public void epicMatchesTheRequest() {
-        String[] subtasks = { "Молоко", "Яйца", "Хлеб" };
+        String[] subtasks = {"Молоко", "Яйца", "Хлеб"};
         Epic epic = new Epic(55, subtasks);
 
         boolean actual = epic.matches("Хлеб");
@@ -53,7 +54,7 @@ class TaskTest {
     @Test
 
     public void epicDoesNotMatchesTheRequest() {
-        String[] subtasks = { "Молоко", "Яйца", "Хлеб" };
+        String[] subtasks = {"Молоко", "Яйца", "Хлеб"};
         Epic epic = new Epic(55, subtasks);
 
         boolean actual = epic.matches("молоко");
